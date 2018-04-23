@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background: teal;
+			float: left;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>jQuery Events</h1>
+	<h1>jQuery Events</h1>
+	<h1>jQuery Events</h1>
+	<button>Click Me!</button>
+
+	<div>Please dont fade me</div>
+	<div>Im begging you please</div>
+	<div>Help help help!!</div>
+
+</body>
+</html>
+
+<!-- Click() Event
+prints when item with id "submit" is clicked
+$("#submit").click(function(){
+	console.log("Another click")
+});
+
+$("button").click(function(){
+ $(this).css("background", "pink")
+});
+
+$("button").click(function(){
+var text = $(this).text();
+ console.log("You clicked " + text);
+});
+
+keypress() Event
+
+$("input").keypress(function(){
+    console.log("YOU PRESSED A KEY");
+});
+
+$("input").keypress(function(event){
+    console.log("event");
+});
+
+$("input").keypress(function(event){
+   if(event.which === 13){
+alert("You Hit Enter")};
+});
+
+on() Event
+
+$(#dataTable tbody tr").on("click", function(){
+	console.log( $(this).text()	);
+});
+
+To change all the elements:
+
+$("h1").on("click", function(){
+    $("h1").css("color", "purple");
+});
+
+To alter the one ive specifically clicked on: 
+
+$("h1").on("click", function(){
+    $(this).css("color", "purple");
+});
+
+$("button").on("mouseenter", function(){
+    console.log("MOUSE ENTER");
+});
+
+In most cases, click() and on("click") will both get the job done
+HOWEVER, there is one key difference:
+
+-click() only adds listeners for existing elements
+-on() will add listeners to all potential future elements
+
+fadeOut()
+
+$("button").on("click", function(){
+	$("div").fadeOut();
+});
+
+$("button").on("click", function(){
+	$("div").fadeOut(1000, function(){
+console.log("Fade Completed");
+});	});
+
+$("button").on("click", function(){
+	$("div").fadeOut(1000, function(){
+console.log("Fade Completed");
+	$(this).remove();
+	});	
+});
+
+fadeIn 
+
+$("button").on("click", function(){
+	$("div").fadeIn(1000, function(){
+console.log("Fade Completed");
+});	});
+
+fadeToggle
+
+$("button").on("click", function(){
+	$("div").fadeToggle(1000);
+});
+
+slideDown / slideUp / slideToggle
+
+$("button").on("click", function(){
+	$("div").slideDown();
+});

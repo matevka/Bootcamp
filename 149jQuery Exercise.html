@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<style type="text/css">
+		.correct {
+			color: green;
+		}
+		.wrong {
+			color: red;
+			background: pink;
+		}
+		.done {
+			color: grey;
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+
+<div>Div 1</div>
+<div class="highlight">Div 2</div>
+<div id="third">Div 3</div>
+<div class="highlight">Div 4</div>
+
+<h1>jQuery Methods Demo</h1>
+
+<input type="text" placeholder="your name">
+<br>
+<select>
+	<option>Ostrich</option>
+	<option>Trurtle</option>
+	<option>Toad</option>
+</select>
+
+<ul>
+	<li>Skittles</li>
+	<li>Starburst</li>
+	<li>Twix</li>
+</ul>
+
+<img src="img/fox.jpg" width="250px" > <br>
+<img src="img/cat.jpg" width="250px" ><br>
+<img src="img/Wallpaper.jpeg" width="250px" >
+
+</body>
+</html>
+
+<!--
+$("div").css("background", "purple");
+
+$("div.highlight").css("width", "200px");
+
+$("#third").css("border", "2px solid orange");
+
+$( "div:first" ).css("color", "pink");
+
+
+Methods Demo
+
+Text:
+like textContent in vanilla, returns or alters the text of an element(s)
+$("li").text();  <-returns the 3 li"s text in one string
+$("ul").text();  <-returns the entire ul in seprated strings
+$("h1").text("New Text"); <-with the new text in the argument, it will replace the old text
+$("li").text("new li text");  <-replaces every li elemnts text to the one in the argument.
+
+HTML
+$("ul").html();  <-retrieves the inner html of the ul element
+$("ul").html("<li>first new li</li><li>second new li</li>");  <-replace the old li with the ones in the argument.
+
+Attr
+use it to replace one or more attribute of an element
+$("img").css("width", "300px");  <-alters the width of the pic
+$("img").attr("src", "img/cat.jpg");  <-changes the img src
+$("input").attr("type", "color");  <-changes the input type
+$("img").last().attr("width", "400px");  <-changes the last img element on the page.
+
+Val
+Extract the value from an element.
+$("input").val();  <-with no argument, just simply extracts the value of the imput.
+$("input").val("updated text");  <-with argument "updated text" its updates the input, mostly used with an empty string to clear ("")
+$("select").val();  <-extract the value of the <select> dropdown menu
+
+addClass - removeClass - toggleClass
+$("h1").addClass("correct");  <-gives the class "correct" to all the h1 on the page
+$("h1").removeClass("correct");  <-do i really av to provide explanation?
+$("li").first().toggleClass("correct");  
+

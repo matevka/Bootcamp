@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Form Demo 2</title>
+</head>
+<body>
+
+	<h1>Register</h1>
+
+<form>
+	First Name
+<input name="First" type="text" placeholder="First Name" required> 
+	Last Name
+<input name="Last" type="text" placeholder="Last Name" required> <br>
+<div>
+<label for="male">Male</label>
+<input name="Gender" id="Male" type="radio" > 
+<label for="female">Female</label>
+<input name="Gender" id="Female" type="radio" > 
+<label for="nutcase">Crazy</label>
+<input name="Gender" id="Psychiatrist" type="radio" >
+</div>
+<div>
+Birthday
+<select name="day" >
+	<option>Day</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+</select>
+<select name="month" >
+	<option>Month</option>
+	<option>Jan</option>
+	<option>Feb</option>
+	<option>March</option>
+</select>
+<select name="year" >
+	<option>Year</option>
+	<option>1991</option>
+	<option>1992</option>
+	<option>1993</option>
+</select>
+</div>
+ <div>
+<input name="email" type="email" placeholder="Email" required> 
+<input name="password" type="password" placeholder="password" pattern=".{5,10}" required title="5 to 10 characters required" required> 
+</div>
+<div>
+<label for="agreed">agree the terms and conditions:</label>
+<input id="agreed" type="checkbox" name="agreed" required> <br>
+</div>
+<input type="Submit">
+</form>
+
+
+</body>
+</html>
